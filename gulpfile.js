@@ -23,7 +23,7 @@ function html() {
 }
 
 function styles(){
-    return src('src/styles/**/*.scss', {since: lastRun('styles')})
+    return src('src/scss/**/*.scss', {since: lastRun('styles')})
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
@@ -34,7 +34,7 @@ function styles(){
 }
 
 function scripts(){
-    return src('src/app/**/*.js', {since: lastRun('scripts')})
+    return src('src/js/**/*.js', {since: lastRun('scripts')})
         .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(jsMinify())
