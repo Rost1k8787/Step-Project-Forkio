@@ -36,7 +36,7 @@ function styles(){
 function scripts(){
     return src('src/app/**/*.js', {since: lastRun('scripts')})
         .pipe(sourcemaps.init())
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('app.min.js'))
         .pipe(jsMinify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest('dist/js'))
@@ -66,8 +66,8 @@ function watching(){
     watch(['src/scss/**/*.scss'],styles)
     watch(['src/js/app.js'],scripts)
     watch(['src/*.html']).on('change', browserSync.reload)
-    // watch('./src/img/**/*.{png,jpg,jpeg,webp,svg}', series('images')).on('change', browserSync.reload);
 }
+
 exports.html=html;
 exports.styles=styles;
 exports.scripts=scripts;
