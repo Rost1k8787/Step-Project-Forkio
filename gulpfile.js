@@ -34,7 +34,7 @@ function styles(){
 }
 
 function scripts(){
-    return src('src/js/**/*.js', {since: lastRun('scripts')})
+    return src('src/scss/**/*.js', {since: lastRun('scripts')})
         .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(jsMinify())
