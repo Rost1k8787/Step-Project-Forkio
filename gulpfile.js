@@ -29,7 +29,7 @@ function scripts(){
 }
 
 function images(){
-    return src('src/img/*.+(png|jpg|jpeg|webp|svg)')
+    return src('src/img/**/*.+(png|jpg|jpeg|webp|svg)')
         .pipe(imagemin({
             progressive: true
         }))
@@ -40,7 +40,7 @@ function images(){
 function serve() {
     return browserSync.init({
         server: {
-            baseDir: ['./dist/']
+            baseDir: ['./src/']
         },
         port: 9000,
         open: true
