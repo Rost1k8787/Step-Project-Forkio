@@ -1,11 +1,8 @@
-@import "./src/scss/variables/colors";
-
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  color: $main-light-text-color;
 }
 
 .container {
@@ -19,6 +16,5 @@ body {
 .section-title {
   font-weight: 700;
   font-size: 48px;
-  color: $main-light-text-color;
 }
 
