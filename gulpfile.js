@@ -51,6 +51,7 @@ function watching(){
     watch(['src/scss/**/*.scss'],styles)
     watch(['src/js/app.js'],scripts)
     watch(['src/*.html']).on('change', browserSync.reload)
+    watch(['src/**/*+(png|jpg|jpeg|webp|svg)'],images)
 }
 
 exports.styles=styles;
