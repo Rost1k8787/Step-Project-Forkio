@@ -70,7 +70,7 @@
         @include ResetButton;
         @include flex-center;
         height: 24px;
-        font-family: -apple-systema,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-family:Arial,sans-serif;
         line-height: 1.67;
         font-size: 12px;
         color: #24292F;
@@ -96,4 +96,501 @@
       }
     }
   }
+}
+
+.features-section {
+  width: 100%;
+  min-width: 320px;
+  position: relative;
+  margin-top: 70px;
+  padding: 95px 0 35px;
+  background: #F4F4F4;
+   @media(max-width: 992px) {
+     padding-top: 62px;
+     padding-bottom: 0;
+     @include flex-column-center;
+   }
+   @media (max-width: 480px) {
+     padding: 32px 0 6px;
+   }
+     .features-content {
+       width: 100%;
+       height: 100%;
+       @include flex-between-center;
+       flex-direction: row-reverse;
+       align-items: flex-start;
+
+       @media(max-width: 992px) {
+          @include flex-column-center;
+       }
+     }
+      .features-header {
+        color: $main-color;
+
+        @media(max-width: 992px) {
+          margin-bottom: 50px;
+          font-size: 42px;
+        }
+        @media(max-width: 480px) {
+          margin-bottom: 36px;
+          font-size: 32px;
+          line-height: 1.19;
+          text-align: center;
+        }
+      }
+        .features-list {
+          width: 38vw;
+          max-width: 600px;
+          margin-bottom: 70px;
+          padding-top: 6px;
+          @include flex-column-j-start;
+          gap: 15px;
+          @media (max-width: 992px) {
+            width: 92vw;
+            padding-top: 0;
+            margin-bottom: 73px;
+            gap: 50px;
+          }
+          @media(max-width: 480px) {
+            width: 87vw;
+            margin-bottom: 58px;
+            @include flex-column-center;
+            align-items: flex-start;
+            gap: 40px;
+            text-align: center;
+          }
+        }
+         .features-item{
+           width: 100%;
+           @include flex-center;
+           align-items: flex-start;
+           gap: 23px;
+           @media (max-width: 992px) {
+             margin-bottom: 0;
+           }
+
+           @media (max-width: 480px) {
+             @include flex-column-center;
+             gap: 0;
+           }
+
+         }
+         .features-icon{
+           min-width: 111px;
+           height: 86px;
+           @include flex-center;
+           align-items: flex-start;
+
+           @media (max-width: 480px) {
+
+             .web-icon {
+               margin-left: 14px;
+             }
+             .power-icon {
+               margin-right: 4px;
+             }
+             .flask-icon {
+               margin-right: 14px;
+             }
+             .loader-icon {
+               margin-right: 6px;
+             }
+           }
+         }
+         .features-description{
+           width: 100%;
+            .features-title{
+              margin-bottom: 17px;
+              display: inline-block;
+              font-size: 16px;
+              line-height: 1.31;
+              color: $main-dark-color;
+
+              @media (max-width: 480px) {
+                margin-top: 14px;
+                line-height: 1;
+              }
+
+            }
+           .features-information {
+             height: 81px;
+             display: inline-block;
+             font-size: 14px;
+             line-height: 1.5;
+             color: $secondary-dark-color;
+
+             @media (max-width: 992px) {
+               height: 87px;
+             }
+             @media (max-width: 480px) {
+               font-family: 'Lato', sans-serif;
+             }
+           }
+         }
+
+   .features-flex {
+     position: absolute;
+     width: 100%;
+     height: 520px;
+     overflow: hidden;
+     top: 170px;
+     right: 0;
+     @media (max-width: 992px) {
+       position: relative;
+       display: flex;
+       justify-content: flex-end;
+       top: auto;
+       bottom: 0;
+       left: 0;
+     }
+
+     @media (max-width: 480px) {
+       display: block;
+       overflow: hidden;
+       min-height: 381px;
+     }
+
+     .features-code-images {
+       position: absolute;
+       min-width: 515px;
+       min-height: 381px;
+       left: 51%;
+
+       @media (max-width: 992px) {
+         position: relative;
+         left: auto;
+         bottom: 0;
+         right: 0;
+       }
+       @media (max-width: 480px) {
+         position: absolute;
+         left: 0;
+       }
+
+       .features-images {
+
+         @media (max-width: 480px) {
+           min-height: 381px;
+         }
+
+       }
+     }
+   }
+}
+
+.testimonials-section {
+   font-family: 'Lato' , sans-serif;
+   font-weight: 700;
+   max-width: 100%;
+   min-width:320px;
+   min-height: 769px;
+   background-image:url("../img/Testominals/testmonials-bg.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+    &::after {
+      content: '';
+      width: 780px;
+      height: 2px;
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: 0 auto;
+      background-color: $top-line-center;
+
+      @media (max-width: 992px) {
+         width: 550px;
+      }
+      @media (max-width: 600px) {
+         width: 245px;
+      }
+    }
+}
+
+.testimonials-company {
+  @include flex-column-between-center;
+  padding: 108px 0 0 ;
+  @media (max-width: 992px) {
+    padding: 85px 0 0;
+  }
+  @media (max-width: 480px) {
+    padding: 56px 0 0;
+  }
+
+  .testimonials-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    @media (max-width: 920px) {
+      font-size: 42px;
+      margin-bottom: 88px;
+    }
+    @media (max-width: 480px) {
+      font-size: 36px;
+      line-height: 1.33;
+      margin-bottom: 53px;
+    }
+  }
+  .testimonials-review {
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(2,150px);
+     column-gap: 90px;
+     row-gap: 110px;
+    margin: 0 0 120px;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, minmax(260px, 327px));
+      grid-template-rows: repeat(3, 150px);
+      column-gap: 40px;
+      row-gap: 60px;
+      margin: 0 0 68px;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: minmax(260px , 325px);
+      grid-auto-rows: 150px;
+      row-gap: 45px;
+      margin: 0 0 38px;
+    }
+  }
+   .testimonials-information {
+     margin-top: 80px;
+     @include flex-column-between-center;
+
+     .testimonials-text {
+       font-style:italic;
+       line-height: 1.5;
+       text-align: center;
+     }
+   }
+
+  .testimonials-footer {
+     display: block;
+     max-width: 890px;
+     text-align: center;
+     line-height: 1.5;
+     font-size: 14px;
+     color:$secondary-testominals-color ;
+     font-weight: 400;
+     margin: 0 0 18px ;
+  }
+}
+
+.section-pricing {
+  max-width: 100%;
+  min-width:320px;
+  min-height: 847px;
+  background-image:url("../img/Pricing/Pricing-Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   .content-pricing {
+     @include flex-column-j-start;
+
+     .pricing-title {
+       display: inline-block;
+       line-height: 1.04;
+       margin-top: 85px;
+       text-align: center;
+        @media (max-width: 992px) {
+          margin-bottom: 39px;
+          font-size: 42px;
+          line-height: 1.05;
+        }
+       @media (max-width: 480px) {
+         margin-bottom: 32px;
+         font-size: 28px;
+         line-height: 1.5;
+       }
+     }
+     .pricing-wrapper {
+       margin-top: 80px;
+       @include flex-center;
+       gap: 15px;
+       @media (max-width: 992px) {
+         max-width: 540px;
+         margin: 0 auto 145px;
+         flex-wrap: wrap;
+         justify-content: flex-end;
+         gap: 82px 25px;
+         position: relative;
+       }
+       @media (max-width: 480px) {
+          @include flex-column-center;
+          gap: 18px;
+          margin-bottom: 12px;
+       }
+       .pricing-cards {
+         width: 257px;
+         min-height: 457px;
+         mix-blend-mode: normal;
+         background: rgba(256,256,256,0.11);
+
+         @media (max-width: 992px) {
+           width:257px ;
+         }
+
+         @media (max-width: 480px) {
+           width:257px;
+         }
+
+         .card-header {
+           width: 100%;
+           height: 97px;
+           @include flex-center;
+           font-size: 24px;
+           text-transform: uppercase;
+           mix-blend-mode: normal;
+           background: rgba(256, 256, 256, 0.06);
+         }
+         .card-information {
+           position: relative;
+           width: 100%;
+           padding-top: 15px;
+           @include flex-column-j-start;
+           align-items: center;
+           &::after{
+             content: '';
+             width: 60px;
+             height: 5px;
+             position: absolute;
+             top: 163px;
+             text-align: center;
+             background-color: $main-color;
+           }
+            @media (max-width: 480px) {
+              padding-top: 30px;
+            }
+         }
+         .card-price {
+           margin-bottom: 5px;
+           font-size: 60px;
+           line-height: 1.5;
+           text-transform: uppercase;
+           @media (max-width: 480px) {
+             font-size: 60px;
+             line-height: 1.03;
+             margin-bottom: 20px;
+           }
+           & span {
+             font-weight: 700;
+           }
+         }
+         .card-validity {
+           margin-bottom: 73px;
+           font-size: 14px;
+           line-height: 1.14;
+           text-transform: uppercase;
+         }
+         .card-license {
+           height: 44px;
+           width: 210px;
+           text-align: center;
+           margin-bottom: 38px;
+           font-size: 16px;
+           line-height: 1.75;
+           @media (max-width: 480px) {
+             height: auto;
+             margin-bottom: 37px;
+             line-height: 1.75;
+           }
+         }
+         .card-purchase {
+           width: 160px;
+           padding: 13px 0;
+           font-size: 15px;
+           text-align: center;
+           text-transform: uppercase;
+           mix-blend-mode: normal;
+           color: $main-light-text-color;
+           background: rgba(256, 256, 256, 0.15);
+           border-radius: 21px;
+         }
+       }
+       .pricing-active-cards {
+         width:289px;
+         height:560px;
+         background: rgba(70, 48, 72, 0.84);
+         @media (max-width: 992px) {
+           position: absolute;
+           width: 560px;
+           left: -41px;
+           bottom: -51px;
+         }
+         @media (max-width: 480px) {
+           position: relative;
+           width: 298px;
+           left: auto;
+           bottom: auto;
+         }
+         .active-card-header {
+           width: 100%;
+           height: 111px;
+           @include flex-center;
+           font-size: 24px;
+           text-transform: uppercase;
+           background: rgba(0, 0, 0, 0.11);
+         }
+         .active-card-information {
+           position: relative;
+           width: 100%;
+           padding-top: 14px;
+           @include flex-column-j-start;
+           align-items: center;
+
+           &::after {
+             content: '';
+             width: 60px;
+             height: 5px;
+             position: absolute;
+             top: 174px;
+             text-align: center;
+             background-color: $main-color;
+           }
+           .active-card-price {
+             margin-bottom: 16px;
+             font-size: 82px;
+             line-height: 1.1;
+             text-transform: uppercase;
+
+             @media (max-width: 480px) {
+               line-height: 1.02;
+             }
+             & span {
+               font-weight: 700;
+             }
+           }
+           .active-card-validity{
+             margin-bottom: 91px;
+             font-size: 14px;
+             line-height: 1.14;
+             text-transform: uppercase;
+           }
+           .active-card-license {
+             height: 48px;
+             width: 199px;
+             text-align: center;
+             margin-bottom: 83px;
+             font-size: 16px;
+             line-height: 1.12;
+             
+             @media (max-width: 480px) {
+               line-height: 2;
+             }
+           }
+           .active-card-purchase {
+             width: 190px;
+             padding: 18px 0;
+             font-size: 16px;
+             line-height: 1.13;
+             text-transform: uppercase;
+             text-align: center;
+             color: $main-light-text-color;
+             background-color: rgba(256,256,256,0.15);
+             border-radius: 40px;
+           }
+         }
+       }
+     }
+   }
 }
