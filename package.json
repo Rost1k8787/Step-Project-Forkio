@@ -16,7 +16,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.60.0"
+    "sass": "1.61.0"
   },
   "dependencies": {
     "browser-sync": "^2.29.1",
