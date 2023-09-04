@@ -1,0 +1,109 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.testimonials {
+    font-family: $family-lato;
+    font-weight: 700;
+    max-width: 100%;
+    min-width: 320px;
+    min-height: 786px;
+    background: url('../images/section_testimonials/testimonials-bg.png')
+        center/cover no-repeat;
+    background-color: #4B3B4E;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 780px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        background-color: $pricing-top-line-color;
+
+        @media (max-width: 992px) {
+            width: 555px;
+        }
+
+        @media (max-width: 600px) {
+            width: 245px;
+        }
+    }
+}
+
+.testimonials__inner {
+    @include flex-column-between-center;
+    padding: 108px 0 0;
+
+    @media (max-width: 992px) {
+        padding: 85px 0 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 56px 0 0;
+    }
+}
+
+.testimonials__title {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 82px;
+    text-align: center;
+
+    @media (max-width: 992px) {
+        font-size: 42px;
+        margin: 0 0 88px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 36px;
+        line-height: 1.33;
+        margin: 0 0 53px;
+    }
+}
+
+.testimonials__reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    column-gap: 90px;
+    row-gap: 110px;
+    margin: 0 0 120px;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax(260px, 327px));
+        grid-template-rows: repeat(3, 150px);
+        column-gap: 40px;
+        row-gap: 60px;
+        margin: 0 0 68px;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: minmax(260px, 327px);
+        grid-auto-rows: 150px;
+        row-gap: 45px;
+        margin: 0 0 38px;
+    }
+}
+
+.testimonials__review {
+    @include flex-column-between-center;
+}
+
+.testimonials__review-text {
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.testimonials__footer {
+    display: block;
+    max-width: 890px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
+    color: $testimonials-secondary-text-color;
+    font-weight: 400;
+    margin: 0 0 18px;
+}

@@ -1,0 +1,23 @@
+@import './variables';
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: $main-light-text-color;
+}
+
+.container {
+    max-width: 1220px;
+    min-width: 320px;
+    padding: 0 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 48px;
+    color: $main-light-text-color;
+}

@@ -1,0 +1,259 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.section_pricing {
+    max-width: 100%;
+    min-width: 320px;
+    min-height: 766px;
+    padding-top: 112px;
+    background: url('../images/section_pricing/pricing-bg.png') center/cover no-repeat;
+    text-align: center;
+
+    @media (max-width: 992px) {
+        padding-top: 88px;
+    }
+    @media (max-width: 480px) {
+        padding-top: 14px;
+    }        
+
+    .pricing__content--wrapper {
+
+        @include flex-column-j-start;
+
+        .pricing__title {
+            margin-bottom: 61px;
+            display: inline-block;
+            line-height: 1.04;
+    
+            @media (max-width: 992px) {
+                margin-bottom: 39px;
+                font-size: 42px;
+                line-height: 1.05;
+            }
+            @media (max-width: 480px) {               
+                margin-bottom: 32px;
+                font-size: 28px;
+                line-height: 1.5;
+            }        
+        }
+
+        .pricing__cards--wrapper {
+            
+            @include flex-center;
+            gap: 15px;
+
+            @media (max-width: 1114px) {
+                width: calc(100% - 20px);
+                gap: 1.5%;
+            }
+
+            @media (max-width: 992px) {
+                max-width: calc($standart-card-width * 2 + $column-gap);
+                margin: 0 auto  calc(($active-card-height - $standart-card-height)/2 + 94px);
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: $row-gap-media-992px $column-gap;
+                position: relative;
+            }
+            @media (max-width: 580px) {
+                width: 100%;
+                gap: $row-gap-media-992px 4.3%;
+            }
+            @media (max-width: 480px) {
+                @include flex-column-center;
+                gap: 18px;
+                margin-bottom: 12px;                
+            }  
+        }
+
+        .card__standart {
+            width: $standart-card-width;
+            min-height: $standart-card-height;
+            background: rgba(256, 256, 256, 0.06);
+
+            @media (max-width: 1114px) {
+                width: 23.5%;
+            }
+            @media (max-width: 992px) {
+                width: $standart-card-width;
+            }
+            @media (max-width: 580px) {
+                width: 47.3%;
+            }
+            @media (max-width: 480px) {
+                width: $standart-card-width;
+            }
+
+            .standart__card--header {
+                width: 100%;
+                height: 97px;
+                @include flex-center;
+                font-size: 24px;
+                text-transform: uppercase;
+                background: rgba(256, 256, 256, 0.11);
+            }
+
+            .standart__card--body {
+                position: relative;
+                width: 100%;
+                padding-top: 15px;
+                @include flex-column-j-start;
+                align-items: center;
+
+                @media (max-width: 480px) {
+                    padding-top: 30px;
+                }
+
+                &::after {
+                    content: '';
+                    width: 60px;
+                    height: 5px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 163px;
+                    margin: 0 auto;
+                    background-color: $main-color;
+                }
+
+                .standart__card--price {
+                    margin-bottom: 5px;
+                    font-size: 60px;
+                    line-height: 1.5;
+                    text-transform: uppercase;
+
+                    @media (max-width: 480px) {
+                        font-size: 60px;
+                        line-height: 1.03;
+                        margin-bottom: 20px;
+                    }
+                    & span {
+                        font-weight: 700;
+                    }
+                }
+                .standart__card--validity {
+                    margin-bottom: 73px;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    text-transform: uppercase;
+                }
+                .standart__card--license {
+                    height: 44px;
+                    margin-bottom: 38px;
+                    font-size: 16px;
+                    line-height: 1.12;
+
+                    @media (max-width: 480px) {
+                        height: auto;
+                        margin-bottom: 37px;
+                        line-height: 1.75; 
+                    }
+                }
+                .standart__card--purchase {
+                    width: 160px;
+                    padding: 13.5px 0;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    color: $main-light-text-color;
+                    background: rgba(256, 256, 256, 0.15);
+                    border-radius: 21px;
+                }
+            }
+        }
+
+        .card__active {
+            width: $active-card-width;
+            min-height: $active-card-height;  
+            background: rgba(70, 48, 72, 0.84);
+
+            @media (max-width: 1114px) {
+                width: 24.95%;
+            }
+            @media (max-width: 992px) {
+                position: absolute;
+                width: $active-card-width;
+                left: calc($standart-card-width - $active-card-width);
+                bottom: calc(($standart-card-height - $active-card-height)/2);
+            }
+            @media (max-width: 580px) {
+                width: 51.30%;
+                left: -15px;
+            }
+            @media (max-width: 480px) {
+                position: relative;
+                width: $active-card-width;
+                left: auto;
+                bottom: auto;
+            } 
+
+            .active__card--header {
+                width: 100%;
+                height: 111px;
+                @include flex-center;
+                font-size: 24px;
+                text-transform: uppercase;
+                background: rgba(0, 0, 0, 0.11);
+            }
+
+            .active__card--body {
+                position: relative;
+                width: 100%;
+                padding-top: 14px;
+                @include flex-column-j-start;
+                align-items: center;
+
+                &::after {
+                    content: '';
+                    width: 60px;
+                    height: 5px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 174px;
+                    margin: 0 auto;
+                    background-color: $main-color;
+                }
+
+                .active__card--price {
+                    margin-bottom: 16px;
+                    font-size: 82px;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+
+                    @media (max-width: 480px) {                
+                        line-height: 1.02;
+                    }
+                    & span {
+                        font-weight: 700;
+                    }
+                }
+                .active__card--validity {
+                    margin-bottom: 91px;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    text-transform: uppercase;
+                }
+                .active__card--license {
+                    height: 48px;
+                    margin-bottom: 83px;
+                    font-size: 16px;
+                    line-height: 1.12;
+
+                    @media (max-width: 480px) {
+                        line-height: 2; 
+                    }
+                }
+                .active__card--purchase {
+                    width: 190px;
+                    padding: 18.5px 0;
+                    font-size: 16px;
+                    line-height: 1.13;
+                    text-transform: uppercase;
+                    color: $main-light-text-color;
+                    background: rgba(256, 256, 256, 0.15);
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+}

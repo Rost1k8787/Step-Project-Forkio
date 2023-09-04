@@ -1,0 +1,27 @@
+/* COLORS */
+
+$main-color: #8d81ac;
+
+$main-dark-text-color: #323232;
+$secondary-dark-text-color: #848e97;
+
+$main-light-text-color: #ffffff;
+
+$revolutionary-editor-color: #635c73;
+
+$testimonials-secondary-text-color: #a291a5;
+
+$pricing-top-line-color: #645766;
+
+/* FONT FAMILIES */
+
+$family-lato: Lato, sans-serif;
+
+/* SECTION PRICING/ CARDS */
+$standart-card-width: 257px;
+$standart-card-height: 457px;
+$active-card-width: 298px;
+$active-card-height: 560px;
+$row-gap: 30px;
+$row-gap-media-992px: calc(($active-card-height - $standart-card-height)/2 + $row-gap);
+$column-gap: 25px;
